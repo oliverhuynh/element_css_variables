@@ -1,0 +1,7 @@
+{
+  "name": "element_css_variables",
+  "version": "1.0.0",
+  "main": "./src/element_css_variables.js",
+  "license": "MIT",
+  "description": "Element CSS Variables"
+}
