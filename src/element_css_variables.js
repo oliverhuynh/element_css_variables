@@ -6,8 +6,11 @@
         for (const ec of ecs) {
           const elements = ec.elements || [ec];
           const eid = ec.id || false;
-          for (const elm of $(elements.join(', ')).filter('[id]:visible').toArray()) {
+          for (const elm of $(elements.join(', ')).filter(':visible').toArray()) {
             const id = eid || $(elm).attr('id');
+            if (!id) {
+              continue ;
+            }
             document.documentElement.style.setProperty(`--${id}-height`, $(elm).outerHeight() + 'px');
           }
         }
