@@ -11,7 +11,12 @@
             if (!id) {
               continue ;
             }
-            document.documentElement.style.setProperty(`--${id}-height`, $(elm).outerHeight() + 'px');
+            let item;
+            item = document.documentElement;
+            if (eid) {
+              item = elm;
+            }
+            item.style.setProperty(`--${id}-height`, $(elm).outerHeight() + 'px');
           }
         }
       }, 250);
